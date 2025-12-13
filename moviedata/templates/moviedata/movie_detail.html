@@ -1,0 +1,65 @@
+{% extends 'moviedata/base.html' %}
+
+{% block content %}
+    <div class="movie-header">
+        <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #fff;">{{ movie.name }}</h1>
+        <div style="margin-bottom: 1.5rem;">
+            <span class="tag">{{ movie.moviecategory.name }}</span>
+        </div>
+
+        <p style="font-size: 1.1rem; max-width: 800px;">{{ movie.description }}</p>
+
+        <hr style="border-color: var(--border-color); margin: 2rem 0;">
+
+        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Lead Actor</span>
+                <p style="font-size: 1.1rem; margin-top: 0.2rem;">{{ movie.actor.name }}</p>
+            </div>
+            <div>
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Lead Actress</span>
+                <p style="font-size: 1.1rem; margin-top: 0.2rem;">{{ movie.actress.name }}</p>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="margin-bottom: 1rem; border-left: 4px solid var(--accent-color); padding-left: 1rem;">Available Shows</h3>
+
+    {% if shows %}
+        <ul class="shows-list">
+            {% for show in shows %}
+            <li class="show-item">
+                <div class="show-info">
+                    <strong>{{ show.multiplexname.name }}</strong>
+                    <div class="show-meta">
+                        {{ show.multiplexname.get_city_display }}, {{ show.multiplexname.get_state_display }}
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="font-size: 1.2rem; color: #fff; font-weight: bold;">
+                        {{ show.showtime|date:"H:i" }}
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        {{ show.showtime|date:"D, d M" }}
+                    </div>
+                </div>
+
+                <div style="text-align: right;">
+                    <div style="margin-bottom: 0.5rem;">
+                        <span class="tag">{{ show.get_type_display }}</span>
+                        <span class="tag">{{ show.get_language_display }}</span>
+                    </div>
+                    <button class="btn">
+                        Book &#8377;{{ show.price }}
+                    </button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div style="padding: 2rem; background-color: var(--card-bg); border-radius: 8px; text-align: center; color: var(--text-muted);">
+            No shows scheduled for this movie yet.
+        </div>
+    {% endif %}
+{% endblock %}

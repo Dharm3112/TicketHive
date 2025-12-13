@@ -1,0 +1,30 @@
+{% extends 'moviedata/base.html' %}
+
+{% block content %}
+    <h2 style="margin-bottom: 1.5rem; font-weight: 300;">Now Showing</h2>
+    
+    <div class="grid">
+        {% for movie in movies %}
+        <div class="card">
+            <div style="height: 150px; background: linear-gradient(45deg, #1a1a1a, #2d2d2d); display: flex; align-items: center; justify-content: center; color: #555;">
+                <span>Movie Poster</span>
+            </div>
+            
+            <div class="card-content">
+                <h3 class="card-title">{{ movie.name }}</h3>
+                <span class="card-subtitle">{{ movie.moviecategory.name }}</span>
+                
+                <p style="color: var(--text-muted); font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                    {{ movie.description }}
+                </p>
+
+                <div style="margin-top: 1rem;">
+                    <a href="{% url 'movie_detail' movie.id %}" class="btn" style="width: 100%; box-sizing: border-box;">View Shows</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+            <p>No movies found.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
