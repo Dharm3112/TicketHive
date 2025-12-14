@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38ba94e6-f8c2-4a84-aa37-97d90df3cb18" name="Changes" comment="Created pythonprojects3 named folder in that we made models of movies">
-      <change afterPath="$PROJECT_DIR$/moviedata/templates/moviedata/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/moviedata/urls.py" afterDir="false" />
+    <list default="true" id="38ba94e6-f8c2-4a84-aa37-97d90df3cb18" name="Changes" comment="Added The FrontEnd Part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviedata/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviedata/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviesite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviesite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +61,16 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/Dharm/PycharmProjects/TicketHive",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
@@ -89,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750390889992</updated>
-      <workItem from="1765707417081" duration="293000" />
+      <workItem from="1765707417081" duration="929000" />
     </task>
     <task id="LOCAL-00001" summary="Created pythonprojects3 named folder in that we made models of movies">
       <option name="closed" value="true" />
@@ -107,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750514666963</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added The FrontEnd Part">
+      <option name="closed" value="true" />
+      <created>1765707931515</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765707931515</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +148,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created pythonprojects3 named folder in that we made models of movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created pythonprojects3 named folder in that we made models of movies" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Added The FrontEnd Part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added The FrontEnd Part" />
   </component>
 </project>

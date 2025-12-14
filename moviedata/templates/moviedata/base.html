@@ -4,200 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicketHive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Dark Theme Aesthetic */
         :root {
-            --bg-color: #0f0f0f;
-            --card-bg: #1a1a1a;
-            --text-main: #e0e0e0;
-            --text-muted: #a0a0a0;
-            --accent-color: #bb86fc; /* Soft Purple for highlights */
-            --btn-bg: #2d2d2d;
-            --btn-hover: #3d3d3d;
-            --btn-primary: #311b92; /* Deep Indigo for main actions */
-            --border-color: #333;
+            --bg-body: #0a0a0a;
+            --bg-card: #161616;
+            --bg-card-hover: #1f1f1f;
+            --primary-accent: #6C63FF; /* Modern Purple */
+            --secondary-accent: #03DAC6; /* Teal for success/info */
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --border-color: #27272a;
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-body);
             color: var(--text-main);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
-            background-color: var(--card-bg);
-            padding: 1.5rem;
+        /* Navbar */
+        nav {
+            background: rgba(22, 22, 22, 0.8);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-            color: var(--accent-color);
-        }
-
-        header a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: bold;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
-        /* Card Styles */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-            border-color: var(--accent-color);
-        }
-
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            color: #fff;
-        }
-
-        .card-subtitle {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: #333;
-            color: var(--text-muted);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-accent), #a18aff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
         }
 
         /* Buttons */
         .btn {
-            display: inline-block;
-            background-color: var(--btn-primary);
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
+            background-color: var(--primary-accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: background-color 0.2s;
+            transition: all 0.3s ease;
+            display: inline-block;
             border: none;
             cursor: pointer;
-            text-align: center;
         }
 
         .btn:hover {
-            background-color: #4527a0; /* Slightly lighter indigo */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
         }
 
         .btn-outline {
-            background-color: transparent;
+            background: transparent;
             border: 1px solid var(--border-color);
-            color: var(--text-muted);
+            color: var(--text-main);
         }
 
         .btn-outline:hover {
-            border-color: var(--text-main);
-            color: var(--text-main);
+            border-color: var(--primary-accent);
+            color: var(--primary-accent);
         }
 
-        /* Detail Page Specifics */
-        .movie-header {
-            background-color: var(--card-bg);
-            padding: 2rem;
+        /* Card Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
         }
 
-        .shows-list {
-            list-style: none;
-            padding: 0;
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .show-item {
-            background-color: var(--card-bg);
-            margin-bottom: 1rem;
-            padding: 1rem;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid var(--border-color);
+        .card-body {
+            padding: 1.5rem;
         }
 
-        .show-info strong {
-            display: block;
-            font-size: 1.1rem;
-            color: var(--text-main);
+        .card-title {
+            font-size: 1.25rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
         }
 
-        .show-meta {
-            color: var(--text-muted);
-            font-size: 0.9rem;
+        .tag {
+            background: #27272a;
+            color: var(--secondary-accent);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            color: var(--text-muted);
+            margin-top: 4rem;
+            padding: 2rem 0;
             border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out forwards;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container" style="margin: 0; max-width: 100%; display: flex; justify-content: space-between;">
-            <h1>TicketHive</h1>
-            <nav>
-                <a href="{% url 'movie_list' %}" class="btn btn-outline">All Movies</a>
-            </nav>
+    <nav>
+        <div class="container nav-content">
+            <a href="{% url 'movie_list' %}" class="logo">TicketHive</a>
+            <div>
+                <a href="/admin/" class="btn btn-outline" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Admin Login</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
+    <main class="container fade-in">
         {% block content %}
         {% endblock %}
     </main>
 
     <footer>
-        <p>&copy; 2025 TicketHive. All rights reserved.</p>
+        <p>&copy; 2025 TicketHive. Designed for Cinema Lovers.</p>
     </footer>
 
 </body>

@@ -9,9 +9,11 @@ def movie_list(request):
 
 
 def movie_detail(request, movie_id):
-    # Fetch specific movie and its related shows
+    # Fetch the specific movie
     selected_movie = get_object_or_404(movie, pk=movie_id)
-    # Using the default reverse relationship name 'shows_set' since no related_name was defined in models
+
+    # Fetch shows for this movie, ordered by time
+    # Note: Using 'shows_set' because related_name wasn't defined in your models
     movie_shows = selected_movie.shows_set.all().order_by('showtime')
 
     return render(request, 'moviedata/movie_detail.html', {
