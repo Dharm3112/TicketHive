@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38ba94e6-f8c2-4a84-aa37-97d90df3cb18" name="Changes" comment="Added The FrontEnd Part">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="38ba94e6-f8c2-4a84-aa37-97d90df3cb18" name="Changes" comment="Upgraded The Ui With Better Looking" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750390889992</updated>
-      <workItem from="1765707417081" duration="929000" />
+      <workItem from="1765707417081" duration="1546000" />
     </task>
     <task id="LOCAL-00001" summary="Created pythonprojects3 named folder in that we made models of movies">
       <option name="closed" value="true" />
@@ -117,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765707931515</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Upgraded The Ui With Better Looking">
+      <option name="closed" value="true" />
+      <created>1765708543411</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765708543411</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +155,8 @@
     <MESSAGE value="Created pythonprojects3 named folder in that we made models of movies" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Added The FrontEnd Part" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added The FrontEnd Part" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Upgraded The Ui With Better Looking" />
+    <option name="LAST_COMMIT_MESSAGE" value="Upgraded The Ui With Better Looking" />
   </component>
 </project>
