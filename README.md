@@ -138,7 +138,7 @@ To make this project a fully production-ready application, the following feature
 * **Dockerization:** Containerize the application using Docker and Docker Compose for easy deployment.
 * **Caching:** Implement Redis caching for the "Movie List" and "Showtimes" pages to improve load speeds under high traffic.
 * **Rest API:** Build a robust API using Django REST Framework (DRF) to support a separate React or Mobile App frontend.
-```
+``
 
 ### Why these matter:
 
