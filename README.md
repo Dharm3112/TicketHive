@@ -152,8 +152,9 @@ To make this project a fully production-ready application, the following feature
 Open-source project created by [Dharm Patel](https://github.com/Dharm3112).
 
 ---
+## 📄 License
 
 <p align="center">
-  <b>Serenipy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
+  Open-source project <b>Serenipy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
 </p>
 
