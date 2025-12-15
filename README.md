@@ -147,10 +147,6 @@ To make this project a fully production-ready application, the following feature
 3.  **Analytics** shows you can build tools for business owners, not just customers.
 
 
-## 📄 License
-
-Open-source project created by [Dharm Patel](https://github.com/Dharm3112).
-
 ---
 ## 📄 License
 
