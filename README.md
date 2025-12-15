@@ -151,6 +151,6 @@ To make this project a fully production-ready application, the following feature
 ## 📄 License
 
 <p align="center">
-  Open-source project <b>Serenipy</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
+  Open-source project <b>TicketHive</b> • Created by <a href="https://github.com/Dharm3112"><b>Dharm Patel</b></a>
 </p>
 
