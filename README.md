@@ -146,10 +146,9 @@ To make this project a fully production-ready application, the following feature
 2.  **Docker/Caching** shows you understand DevOps and performance optimization.
 3.  **Analytics** shows you can build tools for business owners, not just customers.
 
-
----
 ## 📄 License
 
 Distributed under the MIT License. See [LICENSE](https://github.com/Dharm3112/TicketHive/blob/main/LICENSE) for more information.
 
+---
 Open-source project created by [Dharm Patel](https://github.com/Dharm3112).
