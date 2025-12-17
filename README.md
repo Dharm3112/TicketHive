@@ -150,4 +150,6 @@ To make this project a fully production-ready application, the following feature
 ---
 ## 📄 License
 
+Distributed under the MIT License. See [LICENSE](https://github.com/Dharm3112/TicketHive/blob/main/LICENSE) for more information.
+
 Open-source project created by [Dharm Patel](https://github.com/Dharm3112).
