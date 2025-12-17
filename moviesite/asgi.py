@@ -1,4 +1,3 @@
-
 """
 ASGI config for moviesite project.
 
