@@ -83,6 +83,7 @@ python manage.py runserver
 
 The site will look empty initially. You need to add data first:
 
+
 1.  Go to `http://127.0.0.1:8000/admin/`
 2.  Login with your superuser credentials.
 3.  Add **Categories** (e.g., Action, Sci-Fi).
