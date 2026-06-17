@@ -1,5 +1,6 @@
 # TicketHive 🎬
 
+
 A modern, full-stack Django movie ticketing application. This project features a robust backend for managing movies, theaters, and showtimes, paired with a sleek, dark-themed frontend for users to browse and view movie details.
 
 ## ✨ Features
